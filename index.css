@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-green: #16a085;
+  --primary-gold: #f39c12;
+  --dark-green: #0f6b5c;
+  --light-green: #a8e6cf;
+  --cream: #fdf6e3;
+  --dark-blue: #2c3e50;
+}
+
+body {
+  @apply bg-gradient-to-br from-emerald-50 via-white to-teal-50 text-gray-800;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.arabic-font {
+  font-family: "Amiri", serif;
+}
+
+.hero-pattern {
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(22, 160, 133, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(243, 156, 18, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(22, 160, 133, 0.15);
+}
+
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2316a085' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-gold)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-green),
+    transparent
+  );
+  height: 2px;
+  width: 100px;
+  margin: 0 auto;
+}
